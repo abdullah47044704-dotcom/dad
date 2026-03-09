@@ -1,6 +1,8 @@
 // ===== LOGIN TOKEN CHECK =====
 const token = localStorage.getItem("token");
-if(!token){
+const exp = localStorage.getItem("exp");
+
+if(!token || !exp){
   window.location.href="login.html";
 }
 
