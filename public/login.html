@@ -24,16 +24,24 @@
 <script>
 function beep(){ const b=document.getElementById("beep"); if(b){ b.currentTime=0; b.play().catch(()=>{});} }
 async function login(){
-  const id = cid.value, passw = pass.value;
-  const r = await fetch(`/api/login?id=${id}&pass=${passw}`);
-  const d = await r.json();
-  if(d.ok){
-    beep();
-    localStorage.setItem("exp", d.expires);
-    setTimeout(()=>location.href="index.html",300);
-  }else{
-    msg.textContent="Access denied";
+
+  const id=document.getElementById("id").value;
+  const pass=document.getElementById("pass").value;
+
+  const r=await fetch(`/api/login?id=${id}&pass=${pass}`);
+  const d=await r.json();
+
+  if(!d.ok){
+    alert(d.msg);
+    return;
   }
+
+  // এখানে add করবে
+  localStorage.setItem("token", d.token);
+  localStorage.setItem("exp", d.expires);
+
+  location.href="index.html";
+
 }
 </script>
 </body>
