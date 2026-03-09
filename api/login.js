@@ -6,6 +6,7 @@ export default function handler(req, res) {
     { id: "blueanzo حكر", pass: "463910", exp: "2027-03-01" },
     { id: "1", pass: "1", exp: "2027-03-26" },
     { id: "fahim", pass: "056810", exp: "2027-03-26" },
+    { id: "1", pass: "12", exp: "2027-03-26" },
     { id: "client1", pass: "client123", exp: "2026-12-31" }
   ];
 
