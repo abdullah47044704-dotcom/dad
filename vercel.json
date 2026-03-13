@@ -1,6 +1,7 @@
 {
-"routes":[
-{ "src":"/", "dest":"/public/login.html" },
-{ "src":"/dashboard", "dest":"/public/dashboard.html" }
-]
+  "routes": [
+    { "src": "/", "dest": "/public/login.html" },
+    { "src": "/dashboard", "dest": "/public/dashboard.html" },
+    { "src": "/(.*)", "dest": "/public/$1" }
+  ]
 }
