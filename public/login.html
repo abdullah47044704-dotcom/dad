@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shadow Console Access</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg">
+
+<div class="card">
+
+<h1>ACCESS</h1>
+<p class="sub">authorization required</p>
+
+<input id="username" placeholder="Client ID">
+<input id="password" type="password" placeholder="Password">
+
+<button class="loginBtn" onclick="login()">LOGIN</button>
+
+<p id="msg"></p>
+
+</div>
+
+<script>
+
+setInterval(()=>{
+
+document.title="SHADOW CONSOLE • "+Math.floor(Math.random()*9999)
+
+},1000)
+
+</script>
+
+</body>
+</html>
